@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+Angular2First.iml
+node_modules/
+typings/

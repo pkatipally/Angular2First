@@ -1,17 +1,19 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import any = jasmine.any;
 import {IProduct} from "./product";
+import {ProductFilterPipe} from "./product-filter.pipe";
 @Component({
     selector: 'products',
-    templateUrl: 'app/products/products-list.component.html'
+    templateUrl: 'app/products/products-list.component.html',
+    styleUrls : ['app/products/product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
 
     pageTitle: string = "Product List";
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
-    listFilter:string;
+    listFilter:string = "car"
     products: IProduct[] = [
         {
             "productId": 1,
@@ -37,6 +39,9 @@ export class ProductListComponent {
 
     toggleImage():void {
         this.showImage  = !this.showImage;
+    }
+    ngOnInit():void{
+        console.log('ProductListComponent : In OnInit');
     }
 
 }

@@ -15,6 +15,7 @@ var ProductListComponent = (function () {
         this.imageWidth = 50;
         this.imageMargin = 2;
         this.showImage = false;
+        this.listFilter = "car";
         this.products = [
             {
                 "productId": 1,
@@ -41,10 +42,14 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
+    ProductListComponent.prototype.ngOnInit = function () {
+        console.log('ProductListComponent : In OnInit');
+    };
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'products',
-            templateUrl: 'app/products/products-list.component.html'
+            templateUrl: 'app/products/products-list.component.html',
+            styleUrls: ['app/products/product-list.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], ProductListComponent);
