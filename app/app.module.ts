@@ -7,9 +7,12 @@ import { AppComponent }  from './app.component';
 import {ProductListComponent} from "./products/product-list.component";
 import {FormsModule} from "@angular/forms";
 import {ProductFilterPipe} from "./products/product-filter.pipe";
+import {ProductModule} from "./products/product.module";
 @NgModule({
-    imports: [ BrowserModule,FormsModule ],
-    declarations: [ AppComponent, ProductListComponent , ProductFilterPipe],
+    imports: [  BrowserModule,ProductModule ],
+    declarations: [ AppComponent],
     bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+
+}

@@ -35,7 +35,8 @@
                     <td>{{product.productCode}}</td>
                     <td>{{product.releaseDate}}</td>
                     <td>{{product.price | currency}}</td>
-                    <td>{{product.starRating}}</td>
+                    <td><rt-star [rating] = "product.starRating"
+                                (ratingClicked) = "onRatingClicked($event)"></rt-star></td>
                 </tr>
 
 
