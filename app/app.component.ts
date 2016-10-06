@@ -2,13 +2,14 @@
  * Created by RJK on 9/29/2016.
  */
 import {Component} from "@angular/core";
+
+import {ProductService} from "./products/product.service";
 @Component({
     selector: 'my-app',
-    template: `<div>
-            <div><products></products></div>
-            </div>`
-
+    templateUrl: 'app/app.component.html',
+    providers:[ProductService]
 })
 export class AppComponent {
     pageTitle: string = "Product Management";
 }
+

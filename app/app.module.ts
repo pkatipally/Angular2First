@@ -4,13 +4,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
-import {ProductListComponent} from "./products/product-list.component";
-import {FormsModule} from "@angular/forms";
-import {ProductFilterPipe} from "./products/product-filter.pipe";
 import {ProductModule} from "./products/product.module";
+import {HttpModule} from "@angular/http";
+import { RouterModule } from '@angular/router';
+import "rxjs/Rx";
+import {routing} from "./app.routing";
+import {WelcomeComponent} from "./home/welcome.component";
 @NgModule({
-    imports: [  BrowserModule,ProductModule ],
-    declarations: [ AppComponent],
+    imports: [  BrowserModule,HttpModule, RouterModule, routing, ProductModule ],
+    declarations: [ AppComponent,WelcomeComponent],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {

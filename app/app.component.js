@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by RJK on 9/29/2016.
  */
 var core_1 = require("@angular/core");
+var product_service_1 = require("./products/product.service");
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = "Product Management";
@@ -19,7 +20,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n            <div><products></products></div>\n            </div>"
+            templateUrl: 'app/app.component.html',
+            providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

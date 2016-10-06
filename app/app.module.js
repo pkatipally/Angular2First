@@ -15,13 +15,18 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var product_module_1 = require("./products/product.module");
+var http_1 = require("@angular/http");
+var router_1 = require('@angular/router');
+require("rxjs/Rx");
+var app_routing_1 = require("./app.routing");
+var welcome_component_1 = require("./home/welcome.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, product_module_1.ProductModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, router_1.RouterModule, app_routing_1.routing, product_module_1.ProductModule],
+            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
