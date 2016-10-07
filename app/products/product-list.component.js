@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var product_service_1 = require("./product.service");
+var router_1 = require("@angular/router");
 var ProductListComponent = (function () {
-    function ProductListComponent(_productService) {
+    function ProductListComponent(_productService, _route) {
         this._productService = _productService;
+        this._route = _route;
         this.pageTitle = "Product List";
         this.imageWidth = 50;
         this.imageMargin = 2;
@@ -36,7 +38,7 @@ var ProductListComponent = (function () {
             templateUrl: 'app/products/products-list.component.html',
             styleUrls: ['app/products/product-list.component.css'],
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
     ], ProductListComponent);
     return ProductListComponent;
 }());

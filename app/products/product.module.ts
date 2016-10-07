@@ -8,8 +8,9 @@ import {FormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "../common/common.module";
 import {ProductDetailComponent} from "./product-detail.component";
+import {RouterModule} from "@angular/router";
 @NgModule({
-    imports : [BrowserModule,FormsModule,CommonModule],
+    imports : [BrowserModule,FormsModule,CommonModule, RouterModule],
     exports : [ProductListComponent],
     declarations: [ ProductFilterPipe,ProductListComponent,ProductDetailComponent ],
 })

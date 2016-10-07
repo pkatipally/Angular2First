@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import any = jasmine.any;
 import {IProduct} from "./product";
 import {ProductService} from "./product.service";
+import {ActivatedRoute} from "@angular/router";
 @Component({
     selector: 'products',
     templateUrl: 'app/products/products-list.component.html',
@@ -15,13 +16,15 @@ export class ProductListComponent implements OnInit{
     listFilter:string;
     products: IProduct[];
     errorMessage:string;
+    id:number;
 
-    constructor(private _productService:ProductService){
+    constructor(private _productService:ProductService, private _route: ActivatedRoute){
     }
     toggleImage():void {
         this.showImage  = !this.showImage;
     }
     ngOnInit():void{
+
          this._productService.getProducts()
              .subscribe(products => this.products = products,
              error => this.errorMessage = <any>error);

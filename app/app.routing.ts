@@ -9,8 +9,9 @@ import {ProductDetailComponent} from "./products/product-detail.component";
 
 const appRoots: Routes = [
     {path:'', redirectTo:'welcome', pathMatch: 'full'},
-    {path:'welcome', name:'Welcome', component:WelcomeComponent},
+    {path:'welcome', component:WelcomeComponent},
     {path:'products', component:ProductListComponent},
-    {path:'product', component:ProductDetailComponent}
+    {path:'product', component:ProductDetailComponent},
+    {path:'product/:id', component: ProductDetailComponent}
 ]
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoots);
